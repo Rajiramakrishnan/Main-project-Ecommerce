@@ -13,7 +13,7 @@ email:{
 },
 password:{
     required:true,
-    type:password,
+    type:String,
     unique:true
 
 },
