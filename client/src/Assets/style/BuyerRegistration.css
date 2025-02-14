@@ -1,0 +1,146 @@
+.buyer_signup_container{
+  height: 120vh; 
+  width: 100%;
+  /* background-color: aquamarine; */
+    background-image: url("C:\Users\rajir\OneDrive\Desktop\Main-project-Ecommerce\client\src\Assets\Images\pastel-purple-blur-gradation-wallpaper-preview.jpg");
+    background-size: cover;
+}
+.landing_navbar{
+    color:yellowgreen;
+}
+.nav_container .nav_sparkle{
+    color: rgb(244, 223, 33);
+}
+.nav_container .nav_sparkle span{
+    color: rgb(45, 45, 126);
+}
+.nav_sparkle img{
+    height: 40px;
+    width: 45px;
+    margin-left: 70px;
+    margin-right: 10px;
+}
+.navbar_list{
+margin-left: 300px;
+
+}
+.buyer_row_container{
+    height: 100vh;
+    width: 100%;
+    /* background-color: aqua; */
+    
+   
+}
+.buyer-signUp-rightBox {
+    height: 100vh;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: bisque; */
+  }
+  .buyer-signUp-leftBox {
+    /* background-color: aqua; */
+    height: 100vh;
+    width: 50%;
+  
+    
+    justify-content: center;
+    align-items: center;
+  }
+  .buyer-signUp-leftBox-content{
+/*     
+    margin-left: 200px;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center; */
+  }
+  .buyer-signUp-inputBox {
+    height: 93vh;
+    width: 90%;
+    border-radius: 20px;
+  }
+  .buyer-signUp-inputBox h4{
+  color: rgb(104, 143, 241);
+  text-align: center;
+  }
+  .buyer-signUp-leftBox h1 {
+    color:rgb(51, 67, 242) ;
+    margin-top: 10%;
+  }
+  .buyer-signUp-leftBox img {
+    height: 600px;
+    width: 600px;
+    margin-bottom: 50px;
+  margin-left: 80px;  
+  }
+  
+  .buyer-signUp-inputBox-btn {
+    background-color: blue;
+    font-size: 20px;
+    font-weight: 600px;
+    height: 45px;
+    width: 150px;
+    color: white;
+    border-radius: 20px;
+  }
+  
+  .buyer-signUp-inputBox label
+  {
+    text-align: left !important;
+  }
+  .buyer-signUp-inputBox-btn{
+    border:none;
+    background-color: rgb(51, 70, 244);
+    margin-left: 250px;
+  }
+  .buyer_signup_already{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+  }
+  .buyer_signup_already a{
+    padding-right: 20px;
+  
+    text-decoration: none;
+    color: rgb(24, 44, 227);
+  }
+  .buyer_signup_forgetpassword a span{
+    margin-left: 50px;
+  }
+  .buyer_signup_select{
+    width:300px ;
+    height: 35px;
+    color:black;
+    border-color: black;
+  
+  }
+  /*  */
+  .profile_picture_preview{
+    width: 150px; 
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+  }
+  .profile_picture_preview img{
+    width: 150px; 
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+  }
+  #image-upload{
+    margin-top: 20px;
+      padding: 5px;
+      font-size: 16px;
+      cursor: pointer;
+  }
+  /*  */
+  .signup_image_outline input{
+margin-left:200px;
+  }
+  .buyer_signup_login span{
+    padding-left: 5px;
+  }

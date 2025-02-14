@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   res.send("hello world");
 });
 
-app.use("/Ecommerce_api/buyer", BuyerRouter);
+app.use("/ecommerce_api/buyer", BuyerRouter);
 connectDB()
   .then(() => {
     app.listen(port, () => {

@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import BuyerRegistration from './Components/Buyer/BuyerRegistration';
+import BuyerLogin from './Components/Buyer/BuyerLogin';
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Toaster/>
+    <Routes>
+      <Route path="/buyer/signup" element={<BuyerRegistration/>}/>
+      <Route path="/buyer/login" element={<BuyerLogin/>}/>
+    </Routes>
+    </BrowserRouter>
+   
+  
   );
 }
 
