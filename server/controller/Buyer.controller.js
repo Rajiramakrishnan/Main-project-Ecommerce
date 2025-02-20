@@ -57,7 +57,7 @@ const findBuyer=async(req,res)=>{
        if(!buyer){
         return res.status(404).json({message:"buyer not found"})
        }
-      return res.status(200).json({message:"buyer found",data:user})
+      return res.status(200).json({message:"buyer found",data:buyer})
     }catch(error){
       return res.status(500).json({message:"Server Error",error:error.message})
     }
@@ -142,7 +142,7 @@ const findBuyer=async(req,res)=>{
   
       return res.status(200).json({data: findBuyer, token})
     }catch(err) {
-      console.log(err);
+      console.log("error:",err);
       
       return res.status(500).json({err, message: "Server error"})
     }

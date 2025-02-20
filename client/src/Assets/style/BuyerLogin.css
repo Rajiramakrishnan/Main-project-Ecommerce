@@ -1,8 +1,11 @@
 .buyer_login_container{
     height: 120vh; 
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    
     /* background-color: aquamarine; */
-      background-image: url("C:\Users\rajir\OneDrive\Desktop\Main-project-Ecommerce\client\src\Assets\Images\pastel-purple-blur-gradation-wallpaper-preview.jpg");
+      /* background-image: url("C:\Users\rajir\OneDrive\Desktop\Main-project-Ecommerce\client\src\Assets\Images\pastel-purple-blur-gradation-wallpaper-preview.jpg"); */
       background-size: cover;
   }
   .buyer_login_row_container{
