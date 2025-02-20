@@ -43,7 +43,12 @@ function BuyerLogin() {
       console.log("resp", res);
       if (res.status === 200) {
         const token = res.data.token;
+        const id=res.data.data._id;
+        console.log("id",id);
+        
         localStorage.setItem("ecommerce-token", token);
+        localStorage.setItem("ecommerce-buyer-id",id)
+        // todo => save buyer id in local storage, (ecommer-buyer-id)
         toast.success("Login sucessfully");
         navigate("/buyer/profile");
       }
@@ -55,14 +60,14 @@ function BuyerLogin() {
   };
   return (
     <div className="buyer_login_container">
-      <nav class="navbar navbar-expand-lg bg-primary landing_navbar">
-        <div class="container-fluid nav_container">
-          <Link class="navbar-brand nav_sparkle" to="#">
-            <img src={img} class="img-fluid img-thumbnail" alt="..." />
+      <nav className="navbar navbar-expand-lg bg-primary landing_navbar">
+        <div className="container-fluid nav_container">
+          <Link className="navbar-brand nav_sparkle" to="#">
+            <img src={img} className="img-fluid img-thumbnail" alt="..." />
             SPARKLE <span>CART</span>
           </Link>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -70,38 +75,38 @@ function BuyerLogin() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"> </span>
+            <span className="navbar-toggler-icon"> </span>
           </button>
-          <div class="collapse navbar-collapse navbar_list" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item  me-5 fw-bold">
-                <Link class="nav-link active" aria-current="page" to="#">
+          <div className="collapse navbar-collapse navbar_list" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item  me-5 fw-bold">
+                <Link className="nav-link active" aria-current="page" to="#">
                   Home
                 </Link>
               </li>
-              <li class="nav-item me-5 fw-bold">
-                <Link class="nav-link" to="#">
+              <li className="nav-item me-5 fw-bold">
+                <Link className="nav-link" to="#">
                   Shop
                 </Link>
               </li>
-              <li class="nav-item me-5 fw-bold">
-                <Link class="nav-link" to="#">
+              <li className="nav-item me-5 fw-bold">
+                <Link className="nav-link" to="#">
                   Blog
                 </Link>
               </li>
-              <li class="nav-item me-5 fw-bold">
-                <Link class="nav-link d" to="#">
+              <li className="nav-item me-5 fw-bold">
+                <Link className="nav-link d" to="#">
                   About
                 </Link>
               </li>
-              <li class="nav-item me-5 fw-bold">
-                <Link class="nav-link d" to="#">
+              <li className="nav-item me-5 fw-bold">
+                <Link className="nav-link d" to="#">
                   Contact
                 </Link>
               </li>
-              <li class="nav-item dropdown me-5 fw-bold">
+              <li className="nav-item dropdown me-5 fw-bold">
                 <Link
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   to="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -109,24 +114,24 @@ function BuyerLogin() {
                 >
                   Create Account
                 </Link>
-                <ul class="dropdown-menu">
+                <ul className="dropdown-menu">
                   <li>
-                    <Link class="dropdown-item" to="#">
+                    <Link className="dropdown-item" to="#">
                       Buyer
                     </Link>
                   </li>
                   <li>
-                    <hr class="dropdown-divider" />
+                    <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <Link class="dropdown-item" to="#">
+                    <Link className="dropdown-item" to="#">
                       Seller
                     </Link>
                   </li>
                 </ul>
               </li>
-              <li class="nav-item me-5 fw-bold">
-                <Link class="nav-link d" to="/buyer/login">
+              <li className="nav-item me-5 fw-bold">
+                <Link className="nav-link d" to="/buyer/login">
                   Login
                 </Link>
               </li>
@@ -134,8 +139,8 @@ function BuyerLogin() {
           </div>
         </div>
       </nav>
-      <div class=" buyer_login_row_container">
-        <div class="row">
+      <div className=" buyer_login_row_container">
+        <div className="row">
           <div className="col-6 buyer-login-leftBox">
             <div className="buyer-login-leftBox-content">
               <img src={img1} />
@@ -158,7 +163,7 @@ function BuyerLogin() {
                   </div>
                   <div className="buyer_login_input">
                     <input
-                      type="password"
+                      type="text"
                       placeholder="Password"
                       required
                       name="password"

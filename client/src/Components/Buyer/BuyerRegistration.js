@@ -102,14 +102,14 @@ function BuyerRegistration() {
 
   return (
     <div className="buyer_signup_container">
-      <nav class="navbar navbar-expand-lg bg-primary landing_navbar">
-        <div class="container-fluid nav_container">
-          <a class="navbar-brand nav_sparkle" href="#">
-            <img src={img} class="img-fluid img-thumbnail" alt="..." />
+      <nav className="navbar navbar-expand-lg bg-primary landing_navbar">
+        <div className="container-fluid nav_container">
+          <Link className="navbar-brand nav_sparkle" to="#">
+            <img src={img} className="img-fluid img-thumbnail" alt="..." />
             SPARKLE <span>CART</span>
-          </a>
+          </Link>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -117,73 +117,73 @@ function BuyerRegistration() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"> </span>
+            <span className="navbar-toggler-icon"> </span>
           </button>
-          <div class="collapse navbar-collapse navbar_list" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item  me-5 fw-bold">
-                <a class="nav-link active" aria-current="page" href="#">
+          <div className="collapse navbar-collapse navbar_list" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item  me-5 fw-bold">
+                <Link className="nav-link active" aria-current="page" to="#">
                   Home
-                </a>
+                </Link>
               </li>
-              <li class="nav-item me-5 fw-bold">
-                <a class="nav-link" href="#">
+              <li className="nav-item me-5 fw-bold">
+                <Link className="nav-link" to="#">
                   Shop
-                </a>
+                </Link>
               </li>
-              <li class="nav-item me-5 fw-bold">
-                <a class="nav-link" href="#">
+              <li className="nav-item me-5 fw-bold">
+                <Link className="nav-link" to="#">
                   Blog
-                </a>
+                </Link>
               </li>
-              <li class="nav-item me-5 fw-bold">
-                <a class="nav-link d" href="#">
+              <li className="nav-item me-5 fw-bold">
+                <Link className="nav-link d" to="#">
                   About
-                </a>
+                </Link>
               </li>
-              <li class="nav-item me-5 fw-bold">
-                <a class="nav-link d" href="#">
+              <li className="nav-item me-5 fw-bold">
+                <Link className="nav-link d" to="#">
                   Contact
-                </a>
+                </Link>
               </li>
-              <li class="nav-item dropdown me-5 fw-bold">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
+              <li className="nav-item dropdown me-5 fw-bold">
+                <Link
+                  className="nav-link dropdown-toggle"
+                  to="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Create Account
-                </a>
-                <ul class="dropdown-menu">
+                </Link>
+                <ul className="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="#">
                       Buyer
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <hr class="dropdown-divider" />
+                    <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="#">
                       Seller
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
-              <li class="nav-item me-5 fw-bold">
-                <a class="nav-link d" href="#">
+              <li className="nav-item me-5 fw-bold">
+                <Link className="nav-link d" to="#">
                   Login
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
         </div>
       </nav>
 
-      <div class=" buyer_row_container">
-        <div class="row">
+      <div className=" buyer_row_container">
+        <div className="row">
           <div className="col-6 buyer-signUp-leftBox">
             <div className="buyer-signUp-leftBox-content">
               <img src={img1} />

@@ -1,5 +1,5 @@
 .buyer_profile_container{
-    height: 140vh; 
+    height: 120vh; 
     width: 100%;
     display: flex;
     flex-direction:column;
@@ -79,21 +79,14 @@ color: blue;
     border-radius: 2px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
     display:flex;
-    /* align-items: center; */
+    align-items: center;
 }
-.buyer_profile_photo_name img{
-    width: 70px;
-    height: 70px;
-    border-radius: 35px;
-    margin-left: 20px;
-    object-fit: fill;
-}
-.buyer_hello span{
-    margin-left: 30px;
+.buyer_hello{
+    margin-left: 5px;
 
 }
-.buyer_username span{
-    margin-left: 20px;
+.buyer_username{
+    margin-left: 10px;
     font-weight: 700;
 }
 .buyer_profile_info{
@@ -204,9 +197,10 @@ color: blue;
 .buyer_profile2_container{
     width:850px;
     height:730px;
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-direction: column;
+   
     
     /* background-color: aqua; */
     background-color: #fff;
@@ -214,31 +208,58 @@ color: blue;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
 }
 .buyer_profile_form{
-    /* margin-top: 60px; */
+    /* background-color: brown; */
+    margin-bottom: 50px;
     text-align:start;
 }
-.profile_picture_preview{
-    width: 150px; 
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid #ddd;
-  }
-  .profile_picture_preview img{
-    width: 150px; 
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid #ddd;
-  }
-  #image-upload{
+.buyer_profile_picture_preview{
+    position: relative;
+  } 
+  .buyer_profile_picture_preview img{
+   
+    width: 100px; 
+    height: 100px;
     margin-top: 20px;
-      padding: 5px;
-      font-size: 16px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #d7d3d3;
+  }
+  .buyer_profile_editicon{
+/* position: absolute; */
+/* margin-bottom: 70px; */
+  }
+  .buyer_profile_editicon svg{
+    
+  
+
+  }
+  .buyer_profile_picture_preview #image-upload{
+    /* margin-top: 20px; */
+      /* padding: 5px; */
+      /* font-size: 16px; */
       cursor: pointer;
   }
-  .buyer_profile_footer{
+  .buyer_profile22_headings{
+    margin-top: 20px;
+  
     
-    margin-top: 40px;
+    align-items: center;
   }
-
+  .buyer_profile_edit_buttons{
+    margin: auto;
+    width: 700px;
+    /* background-color: #878787; */
+    display: flex;
+    
+    justify-content: space-between;
+  }
+  .buyer_profile_edit_buttons button{
+    background-color: blue;
+    font-size: 18
+    +px;
+    font-weight: 400px;
+    height: 45px;
+    width: 150px;
+    color: white;
+    border-radius: 20px;
+  }

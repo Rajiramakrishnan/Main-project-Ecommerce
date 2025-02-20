@@ -142,7 +142,7 @@ const findBuyer=async(req,res)=>{
   
       return res.status(200).json({data: findBuyer, token})
     }catch(err) {
-      console.log(err);
+      console.log("error:",err);
       
       return res.status(500).json({err, message: "Server error"})
     }
