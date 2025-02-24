@@ -1,0 +1,8 @@
+.seller_login_img{
+    
+        height: 600px;
+        width: 600px;
+        margin-bottom: 50px;
+      margin-left: 80px;  
+      object-fit:contain;
+}

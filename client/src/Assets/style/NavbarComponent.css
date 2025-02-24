@@ -1,0 +1,24 @@
+
+
+
+.landing_navbar{
+    color:yellowgreen;
+}
+
+.nav_container .nav_sparkle{
+    color: rgb(244, 223, 33);
+}
+.nav_container .nav_sparkle span{
+    color: rgb(45, 45, 126);
+}
+.nav_sparkle img{
+    height: 40px;
+    width: 45px;
+    margin-left: 70px;
+    margin-right: 10px;
+}
+.navbar_list{
+margin-left: 300px;
+
+}
+
