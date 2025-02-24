@@ -16,7 +16,7 @@ function BuyerLogin() {
   const navigate = useNavigate();
 
   const [logindata, setlogindata] = useState({
-    fullName: "",
+    email: "",
     password: "",
   });
 
@@ -28,8 +28,8 @@ function BuyerLogin() {
   
   const onSubmit = (e) => {
     e.preventDefault();
-    const { fullName, password } = logindata;
-    if (!fullName || !password) {
+    const { email, password } = logindata;
+    if (!email || !password) {
       toast.error("All fields are required");
       return;
     }
@@ -116,7 +116,7 @@ function BuyerLogin() {
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to="#">
+                    <Link className="dropdown-item" to="/buyer/signup">
                       Buyer
                     </Link>
                   </li>
@@ -130,11 +130,11 @@ function BuyerLogin() {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item me-5 fw-bold">
+              {/* <li className="nav-item me-5 fw-bold">
                 <Link className="nav-link d" to="/buyer/login">
                   Login
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -154,9 +154,9 @@ function BuyerLogin() {
                   <div className="buyer_login_input">
                     <input
                       type="text"
-                      placeholder="UserName"
+                      placeholder="Email "
                       required
-                      name="fullName"
+                      name="email"
                       onChange={change}
                     />
                     <FaUser className="buyer_login_icon" />

@@ -1,4 +1,3 @@
-
 import img1 from "../../Assets/Images/profile-pic-female_0627fd.svg";
 import img2 from "../../Assets/Images/download.svg";
 import { Link, useParams } from "react-router-dom";
@@ -6,48 +5,41 @@ import { useEffect, useState } from "react";
 import { axiosInstance } from "../../Api/axiosInstance";
 import toast from "react-hot-toast";
 import { BASE_URL } from "../../Api/api";
-import "../../Assets/style/profileSidebar.css"
-
+import "../../Assets/style/profileSidebar.css";
 
 export const ProfileSidebar = () => {
-  const[profile,setprofile]=useState({});
-  const {id}=useParams();
+  const [profile, setprofile] = useState({});
+  const { id } = useParams();
   console.log(id);
-  let buyerImg=`${BASE_URL}/${profile.buyerImg}`
-  const getDataFromServer=async(token,id)=>{
-    try{
-      const res=await axiosInstance.get(`/buyer/findbuyer/${id}`,
-        {
-          headers:{
-            Authorization:`Bearer ${token}`,
-          },
-        }
-      )
-      console.log('resp',res);
-      if(res.status==200){
+  let buyerImg = `${BASE_URL}/${profile.buyerImg}`;
+  const getDataFromServer = async (token, id) => {
+    try {
+      const res = await axiosInstance.get(`/buyer/findbuyer/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      console.log("resp", res);
+      if (res.status == 200) {
         setprofile(res.data.data);
       }
-    }
-    catch(error){
-      const msg=error?.response?.data?.message;
+    } catch (error) {
+      const msg = error?.response?.data?.message;
       alert(msg);
-      console.log("error on finding buyer",error);
-      
+      console.log("error on finding buyer", error);
     }
-  }
-  useEffect(()=>{
-    const tokenId=localStorage.getItem("ecommerce-token")||null;
-    const buyerId=localStorage.getItem("ecommerce-buyer-id")||null;
-  if(tokenId&&buyerId){
-    getDataFromServer(tokenId,buyerId);}
-    else{
-toast.error("Login again")
-// navigate("/buyer/login")
+  };
+  useEffect(() => {
+    const tokenId = localStorage.getItem("ecommerce-token") || null;
+    const buyerId = localStorage.getItem("ecommerce-buyer-id") || null;
+    if (tokenId && buyerId) {
+      getDataFromServer(tokenId, buyerId);
+    } else {
+      toast.error("Login again");
+      // navigate("/buyer/login")
     }
-   
-  
-  },[])
-  
+  }, []);
+
   return (
     <>
       <div className="buyer_profile_photo_name">

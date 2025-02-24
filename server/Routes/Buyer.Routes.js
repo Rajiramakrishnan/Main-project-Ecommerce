@@ -1,5 +1,6 @@
 const express = require("express");
 const BuyerRouter = express.Router();
+
 const {
   addBuyer,
   findBuyer,
@@ -8,8 +9,9 @@ const {
   findanddelete,
   login,
 } = require("../controller/Buyer.controller.js");
+
 const { protectRoute } = require("../Middlewares/jwtAuth.js");
-const { uploadBuyerImg } = require("../Middlewares/multer.js");
+const { uploadBuyerSellerImg } = require("../Middlewares/multer.js");
 const { validatePassword } = require("../Middlewares/validatePassword.js");
 const { emailValidation } = require("../Middlewares/validateEmail.js");
 const { validatePhoneno } = require("../Middlewares/validatePhoneNumber.js");
@@ -19,7 +21,7 @@ BuyerRouter.get("/", (req, res) => {
 });
 BuyerRouter.post(
   "/addbuyer",
-  uploadBuyerImg.single("buyerImg"),
+  uploadBuyerSellerImg.single("buyerImg"),
   fileValidation,
   emailValidation,
   validatePassword,

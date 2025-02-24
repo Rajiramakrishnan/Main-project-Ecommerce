@@ -1,0 +1,51 @@
+const mongoose=require("mongoose");
+const {Schema,model}=mongoose;
+const SellerSchema=Schema({
+    name:{
+        type:String,
+        required:true
+    },
+    email:{
+        type:String,
+        required:true,
+        unique:true
+    },
+    phoneNumber:{
+        type:String,
+        required:true
+    },
+    address:{
+        type:String,
+        required:true
+    },
+    state:{
+        type:String,
+        required:true
+    },
+    pincode:{
+        type:String,
+        required:true
+    },
+    gstNumber:{
+        type:String,
+        required:true
+    },
+    password:{
+        type:String,
+        required:true
+    },
+    confirmPassword:{
+        type:String,
+        required:true
+    },
+    sellerImg:{
+        type:String,
+        required:true
+    }
+},
+{
+    timestamps:true
+}
+);
+const SellerModel=model("seller",SellerSchema);
+module.exports={SellerModel}

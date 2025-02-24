@@ -21,7 +21,7 @@ const storage = multer.diskStorage({
     }
   })
   
-  const uploadBuyerImg = multer({ storage: storage,
+  const uploadBuyerSellerImg = multer({ storage: storage,
     limits: { fileSize: 10 * 1024 * 1024 }, // 10MB file size limit(file size limit)
     fileFilter: (req, file, cb) => {   //file type validation (only image)
       const allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
@@ -36,5 +36,5 @@ const storage = multer.diskStorage({
 
   
   module.exports = {
-    uploadBuyerImg
+    uploadBuyerSellerImg
   }
