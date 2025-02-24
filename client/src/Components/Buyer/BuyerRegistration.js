@@ -158,7 +158,7 @@ function BuyerRegistration() {
                 </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to="#">
+                    <Link className="dropdown-item" to="/buyer/signup">
                       Buyer
                     </Link>
                   </li>
@@ -173,7 +173,7 @@ function BuyerRegistration() {
                 </ul>
               </li>
               <li className="nav-item me-5 fw-bold">
-                <Link className="nav-link d" to="#">
+                <Link className="nav-link d" to="/buyer/login">
                   Login
                 </Link>
               </li>

@@ -5,7 +5,7 @@ import BuyerRegistration from './Components/Buyer/BuyerRegistration';
 import BuyerLogin from './Components/Buyer/BuyerLogin';
 import { Toaster } from "react-hot-toast";
 import BuyerProfile from './Components/Buyer/BuyerProfile';
-
+import navbar from './Components/common/navbar';
 import BuyerViewProfile from './Components/Buyer/BuyerViewProfile';
 import Footer from './Components/Buyer/Footer';
 
@@ -20,6 +20,8 @@ function App() {
   
       <Route path="/buyer/viewprofile1" element={<BuyerViewProfile/>}/>
       <Route path="/footer" element={<Footer/>}/>
+      <Route path="/navbar" element={<navbar/>}/>
+
 
     </Routes>
     </BrowserRouter>

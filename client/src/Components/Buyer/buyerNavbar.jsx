@@ -47,7 +47,7 @@ toast.error("Login again")
   
   },[])
   return (
-    <nav className="navbar  navbar-expand-lg bg-primary buyer_profile_navbar ">
+    <nav className="navbar  navbar-expand-lg bg-primary buyer_profile_navbar" data-bs-theme="dark">
       <div className="container-fluid">
         <Link className="navbar-brand buyer_profile_nav" to="#">
           <img src={img} className="img-fluid img-thumbnail" alt="..." />

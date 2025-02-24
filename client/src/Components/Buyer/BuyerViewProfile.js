@@ -79,8 +79,8 @@ function BuyerViewProfile({ changeToEdit }) {
                 </div>
                 <div className="viewprofile_name_mail">
                   <span>{viewprofile.fullName}</span>
-                  <br></br>
-                  <span>{viewprofile.email}</span>
+                  
+                 
                 </div>
               </div>
             </div>

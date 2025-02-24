@@ -68,7 +68,7 @@ const findBuyer=async(req,res)=>{
        console.log(buyers);
        
        
-      return res.status(200).json({message:"Buyers found",data:users})
+      return res.status(200).json({message:"Buyers found",data:buyers})
     }catch(error){
       return res.status(500).json({message:"Server Error",error:error.message})
     }
@@ -90,7 +90,7 @@ const findBuyer=async(req,res)=>{
         return res.status(404).json({message:"Buyer  not found"})
       }
       else{
-        return res. status(200).json({message:"Buyer updated",data:newuser})
+        return res. status(200).json({message:"Buyer updated",data:newbuyer})
       }
       
       
@@ -108,7 +108,7 @@ const findBuyer=async(req,res)=>{
         return res.status(404).json({message:"Buyer not deleted"})
       }
       else{
-        return res.status(200).json({message:"Buyer deleted",data:delUser})
+        return res.status(200).json({message:"Buyer deleted",data:delBuyer})
       }
     }
     catch(error){
@@ -117,15 +117,15 @@ const findBuyer=async(req,res)=>{
   }
   const login=async(req,res)=>{
     try{
-      const FullName=req.body.fullName;
+      const Email=req.body.email;
       const Password=req.body.password;
   
       console.log('body', req.body)
   
-      const findBuyer=await BuyerModel.findOne({fullName: FullName})
+      const findBuyer=await BuyerModel.findOne({email: Email})
      
       if(!findBuyer){
-         return res.status(404).json({message:"Invalid buyername"})
+         return res.status(404).json({message:"Invalid buyer mail id"})
         }
        const isSame = await checkPass(Password, findBuyer.password)
      if (!isSame) {
