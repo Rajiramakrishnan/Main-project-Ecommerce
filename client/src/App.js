@@ -9,6 +9,7 @@ import NavbarComponent from './Components/common/NavbarComponent';
 import SellerLoginComponent from './Components/Seller/SellerLoginComponent';
 import BuyerViewProfile from './Components/Buyer/BuyerViewProfile';
 import Footer from './Components/Buyer/Footer';
+import { HomePage } from './Components/common/HomePage';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
 
       {/* Common Routes */}
       <Route path="/navbar" element={<NavbarComponent/>}/>
+      <Route path='/HomePage'element={<HomePage/>}/>
 
       {/* Seller routes */}
       <Route path="/seller/login" element={<SellerLoginComponent/>}/>
