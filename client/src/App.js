@@ -10,6 +10,7 @@ import SellerLoginComponent from './Components/Seller/SellerLoginComponent';
 import BuyerViewProfile from './Components/Buyer/BuyerViewProfile';
 import Footer from './Components/Buyer/Footer';
 import { HomePage } from './Components/common/HomePage';
+import { ViewProduct } from './Components/common/HomePage2';
 
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
       {/* Common Routes */}
       <Route path="/navbar" element={<NavbarComponent/>}/>
       <Route path='/HomePage'element={<HomePage/>}/>
+      <Route path='/HomePage2'element={<ViewProduct/>}/>
+      
 
       {/* Seller routes */}
       <Route path="/seller/login" element={<SellerLoginComponent/>}/>

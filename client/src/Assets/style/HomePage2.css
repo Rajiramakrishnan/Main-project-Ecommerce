@@ -1,0 +1,17 @@
+.viewProductCard
+{
+    height:450px;
+    width: 260px;
+    
+}
+.viewProductCard img
+{
+    height: 60%;
+    width: 85%;
+    margin-left: 7%;
+    margin-top: 5%;
+}
+.viewProductCard p
+{
+    text-align: center;
+}

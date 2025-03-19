@@ -10,6 +10,7 @@ import userlandinghand from "../../Assets/Images/IMG-20250317-WA0009.jpg";
 import userlandingdelivery from "../../Assets/Images/IMG-20250317-WA0006.jpg";
 import Footer from "../Buyer/Footer";
 import NavbarComponent from "./NavbarComponent";
+import { ViewProduct } from "./HomePage2";
 
 export const HomePage = () => {
   return (
@@ -71,7 +72,8 @@ export const HomePage = () => {
           </Carousel.Item>
         </Carousel>
       </div>
-      <div style={{ marginTop: "100px" }}>
+      <ViewProduct/>
+          <div style={{ marginTop: "100px" }}>
         <div className="container mt-5">
           <div className="row container">
             <div className="col-6">
