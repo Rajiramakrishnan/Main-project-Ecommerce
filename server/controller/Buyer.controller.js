@@ -75,16 +75,23 @@ const findBuyer=async(req,res)=>{
   }
   const findandupdate=async(req,res)=>{
     try{
+      console.log("body", req.body);
+      console.log(req.file);
+      
+      let imgPath=req.file;
+      console.log("imgpath",imgPath);
       const buyerId=req.params.id;
-      const newPassword=req.body.newPassword;
+      console.log(buyerId);
+      
+      const newPassword=req.body.password;
       console.log(newPassword);
       
       const saltRound=10;
       const hashedNewPassword=await bcrypt.hash(newPassword, saltRound)
       console.log(hashedNewPassword);
-      const newEmail=req.body.newEmail;
+      const newEmail=req.body.email;
       console.log(newEmail);
-      const newbuyer=await BuyerModel.findByIdAndUpdate(buyerId,{password:hashedNewPassword,email:newEmail},{new:true})
+      const newbuyer=await BuyerModel.findByIdAndUpdate(buyerId,{email:newEmail},{buyerImg:imgPath.path},{new:true})
       console.log(newbuyer);
       if(!newbuyer){
         return res.status(404).json({message:"Buyer  not found"})
@@ -123,11 +130,15 @@ const findBuyer=async(req,res)=>{
       console.log('body', req.body)
   
       const findBuyer=await BuyerModel.findOne({email: Email})
+      console.log(findBuyer);
+      
      
       if(!findBuyer){
          return res.status(404).json({message:"Invalid buyer mail id"})
         }
        const isSame = await checkPass(Password, findBuyer.password)
+       console.log(isSame);
+       
      if (!isSame) {
           
           return res.status(404).json({message:"user not found"})

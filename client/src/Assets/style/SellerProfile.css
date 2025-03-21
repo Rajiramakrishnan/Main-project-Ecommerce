@@ -1,0 +1,42 @@
+.seller_profile_container{
+    height: 140vh; 
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    /* background-color: aquamarine; */
+      /* background-image: url("C:\Users\rajir\OneDrive\Desktop\Main-project-Ecommerce\client\src\Assets\Images\pastel-purple-blur-gradation-wallpaper-preview.jpg"); */
+      background-size: cover;
+  
+  }
+  .seller_profile_body{
+    width: 100%;
+    height: 120vh;
+    min-width: 1128px;
+    background-color:  #f1f3f6;
+  }
+  .seller_profile_row_col{
+    /* margin: auto;*/
+    margin-top: 20px;
+    position: absolute;
+    width:100%;
+    height:680px;
+    /* background-color: blue; */
+}
+.seller_row{
+    padding:10px 34px 0;
+    margin-top: 500px;
+    height: 100vh;
+    width: 90%;
+
+    /* border: 2px 2px solid orange; */
+    /* background-color: blueviolet; */
+}
+.seller_profile_col8{
+    /* background-color: bisque; */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+
+}
+.seller_profile_col4{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+}

@@ -41,6 +41,10 @@ const SellerSchema=Schema({
     sellerImg:{
         type:String,
         required:true
+    },
+    district:{
+type:String,
+required:true
     }
 },
 {

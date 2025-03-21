@@ -1,0 +1,98 @@
+.ecommerce_Home_carousel {
+    width: 100%;
+    /* height: 600px; */
+    margin: auto;
+    /* background-color: brown; */
+    
+  }
+  .ecommerce_Home_carousel img {
+   
+    height: 550px;
+    width: 100%;
+    object-fit:fill;
+  }
+  .ecommerce-home-carousel-Item {
+    /* max-height: 400px; */
+  }
+  .ecommerce-Home-carousel-outer-box {
+    max-height: 1000px;
+    width: 100%;
+    margin: auto;
+    /* margin-top: 5%; */
+    /* padding-bottom: 20px; */
+    background-color:aqua;
+  }
+  .ecommerce-details-caption {
+    padding-bottom: 7%;
+    padding-right: 40%;
+  }
+  .ecommerce-home-details-button {
+    width: 70%;
+    height: 50px;
+    border-radius: 20px;
+    font-family: noto sans;
+    font-size: 1.4vw;
+    font-weight: 500;
+    box-shadow: 5px 5px 20px black;
+  }
+  .ecommerce-home-details-button:hover {
+    width: 70% !important;
+    font-size: 1.5vw;
+  }
+  .ecommerce-details-caption h3 {
+    font-size: 3vw;
+  }
+  .ecommerce-home-details-cards-box {
+    width: 80%;
+    margin: auto;
+    margin-top: 3%;
+    padding-bottom: 50px;
+    text-align: center;
+    padding-left: 5%;
+ 
+    width: 100%;
+    margin: auto;
+  }
+  /* .ecommerce_Home_carousel img {
+    object-fit: cover;
+    max-height: 400px;
+    width: 100%;
+  }
+  .ecommerce-home-carousel-Item {
+    max-height: 400px;
+  } */
+  /* .ecommerce-Home-carousel-outer-box {
+    max-height: 408px;
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+    padding-bottom: 20px;
+  } */
+  .ecommerce-details-caption {
+    padding-bottom: 7%;
+    padding-right: 40%;
+  }
+  .ecommerce-home-details-button {
+    width: 70%;
+    height: 50px;
+    border-radius: 20px;
+    font-family: noto sans;
+    font-size: 1.4vw;
+    font-weight: 500;
+    box-shadow: 5px 5px 20px black;
+  }
+  .ecommerce-home-details-button:hover {
+    width: 70% !important;
+    font-size: 1.5vw;
+  }
+  .ecommerce-details-caption h3 {
+    font-size: 3vw;
+  }
+  .ecommerce-home-details-cards-box {
+    width: 80%;
+    margin: auto;
+    margin-top: 3%;
+    padding-bottom: 50px;
+    text-align: center;
+    padding-left: 5%;
+  }
