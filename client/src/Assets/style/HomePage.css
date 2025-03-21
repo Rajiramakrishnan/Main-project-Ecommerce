@@ -1,0 +1,18 @@
+.ecommerce_home_card1_heading h6{
+    font-size: 1.75rem;
+    padding-left:0.5em;
+}
+
+.ecommerce_home_card1_heading{
+    margin-block:1em;
+    display:flex;
+    justify-content: space-between;
+}
+
+
+
+@media (min-width:768px){
+    .ecommerce_home_card1_container{
+        padding-inline:2em;
+    }
+}
