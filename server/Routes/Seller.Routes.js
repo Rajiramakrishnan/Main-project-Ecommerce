@@ -12,7 +12,7 @@ const { fileValidation } = require("../Middlewares/validateFile.js");
 SellerRouter.get("/", (req, res) => {
   return res.json({ message: "It is a seller Router" });
 });
-SellerRouter.post("/addseller",uploadBuyerSellerImg.single("sellerImg"),fileValidation,
+SellerRouter.post("/addseller",uploadBuyerSellerImg.single("sellerImg"),
 emailValidation,
 validatePassword,
 validatePhoneno,addSeller)

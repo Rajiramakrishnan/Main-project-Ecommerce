@@ -4,7 +4,6 @@ const { genToken } = require("../Utils/generateToken.js");
 const { checkPass } = require("../Utils/password.js");
 const addSeller = async (req, res) => {
   try {
-    console.log("req:", req.body);
     let imgPath = req.file;
     const {
       name,
@@ -15,6 +14,7 @@ const addSeller = async (req, res) => {
       pincode,
       gstNumber,
       password,
+      district,
       confirmPassword,
     } = req.body;
     const saltRound = 20;
@@ -28,6 +28,7 @@ const addSeller = async (req, res) => {
       address,
       state,
       pincode,
+      district,
       gstNumber,
       password: hashedPassword,
       confirmPassword,
@@ -71,6 +72,8 @@ const findAllSellers=async(req,res)=>{
 const findandupdate=async(req,res)=>{
   try{
     const sellerId=req.params.id;
+    console.log(sellerId);
+    
     const newPassword=req.body.newPassword;
     console.log(newPassword);
     
@@ -79,6 +82,10 @@ const findandupdate=async(req,res)=>{
     console.log(hashedNewPassword);
     const newEmail=req.body.newEmail;
     console.log(newEmail);
+
+
+
+    
     const newseller=await SellerModel.findByIdAndUpdate(sellerId,{password:hashedNewPassword,email:newEmail},{new:true})
     console.log(newseller);
     if(!newseller){

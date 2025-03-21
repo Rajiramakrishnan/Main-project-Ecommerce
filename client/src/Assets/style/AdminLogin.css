@@ -1,0 +1,13 @@
+.admin_login_container{
+    height:120vh;
+    width:100%
+
+
+}
+.admin_login_submit{
+    margin-top: 40px;
+}
+.admin_login_submit button{
+  background:blue;
+    box-shadow: 0 0 10px rgba(0,0,0, .1);
+}

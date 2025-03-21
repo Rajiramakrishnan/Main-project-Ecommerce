@@ -44,7 +44,7 @@ function SellerLoginComponent() {
         localStorage.setItem("ecommerce-seller-token",token);
         localStorage.setItem("ecommerce-seller-id",sellerId);
                toast.success("login successfully");
-            //    navigate("/seller/profile")   
+            navigate("/seller/profile")   
     }
        
         }catch(error){
