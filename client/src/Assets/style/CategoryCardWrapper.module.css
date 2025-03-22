@@ -1,0 +1,23 @@
+.categorySection{
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    gap:1em;
+    margin-inline:1em;
+    margin-bottom:2em;
+    padding-bottom:0.5em;
+   }
+   
+   @media (min-width:768px){
+       .categorySection{
+      flex-direction: column;
+          }
+   }
+   @media (min-width:1024px){
+       .categorySection{
+           /* display: grid;
+           grid-template-columns: repeat(3,1fr); */
+           flex-direction: row;
+          }
+   }

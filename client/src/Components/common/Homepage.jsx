@@ -6,6 +6,10 @@ import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router-dom';
 import DealCardWrapper from '../Cards/Deal-cards/DealCardWrapper';
+import TrendingCardWrapper from '../Cards/Trending-cards/TrendingCardWrapper';
+import ElectronicsCardWrapper from '../Cards/Electronics-cards/ElectronicsCardWrapper';
+import CategoryCardWrapper from '../Cards/Category-cards/CategoryCardWrapper';
+import Footer from '../Buyer/Footer';
 
 // import ExampleCarouselImage from 'components/ExampleCarouselImage';
 
@@ -29,7 +33,27 @@ function Homepage() {
 </div>
 <DealCardWrapper/>
         </div>
-    </div>
+        <div className='ecommerce_home_card1_heading'>
+  <h6> Trending Must-Haves</h6>
+  <Link to="#">View all</Link>
+
+</div>
+<TrendingCardWrapper/>
+<div className='ecommerce_home_card1_heading'>
+  <h6> Best of Electronics</h6>
+  <Link to="#">View all</Link>
+
+</div>
+<ElectronicsCardWrapper/>
+<div className='ecommerce_home_card1_heading'>
+  <h6>Explore our categories</h6>
+  <Link to="#">View all</Link>
+  </div>
+<CategoryCardWrapper/>
+
+<Footer/>
+        </div>
+ 
   )
 }
 
