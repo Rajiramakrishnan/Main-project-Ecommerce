@@ -4,7 +4,7 @@ import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
 import img1 from "../../Assets/Images/carousal4.png"
 import img2 from "../../Assets/Images/girlcar.png"
-import img3 from "../../Assets/Images/phonecar.jpg"
+import img3 from "../../Assets/Images/phonecarousel.png"
 import img4 from "../../Assets/Images/newcarousal.jpg"
 import img5 from "../../Assets/Images/carousal1.jpg"
 import "../../Assets/style/Landingcarousal.css"
