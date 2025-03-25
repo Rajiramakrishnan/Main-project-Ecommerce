@@ -18,7 +18,7 @@ validatePassword,
 validatePhoneno,addSeller)
 SellerRouter.get("/findallsellers",protectRoute,findAllSellers);
 SellerRouter.get("/findseller/:id",protectRoute,findSeller);
-SellerRouter.patch("/findandupdate/:id",findandupdate);
+SellerRouter.patch("/findandupdate/:id",uploadBuyerSellerImg.single("sellerImg"),findandupdate);
 SellerRouter.delete("/findanddelete/:id",findanddelete);
 SellerRouter.post("/login",login)
 module.exports = { SellerRouter };

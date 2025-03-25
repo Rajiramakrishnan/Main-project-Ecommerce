@@ -30,7 +30,7 @@ const addSeller = async (req, res) => {
       pincode,
       district,
       gstNumber,
-      password: hashedPassword,
+      password,
       confirmPassword,
       sellerImg: imgPath.filename,
     });
@@ -73,26 +73,54 @@ const findandupdate=async(req,res)=>{
   try{
     const sellerId=req.params.id;
     console.log(sellerId);
+    const {
+      name,
+      email,
+      phoneNumber,
+      address,
+      state,
+      pincode,
+      district,
+      gstNumber,
+      password,
+      confirmPassword,
+   }=req.body;
+ 
+    let imgPath=req.file;
+    const newSeller=await SellerModel.findByIdAndUpdate(sellerId,name,
+      email,
+      phoneNumber,
+      address,
+      state,
+      pincode,
+      district,
+      gstNumber,
+      password,
+      confirmPassword,
+      {sellerImg:imgPath.filename},
+      {new:true}
+    )
+
     
-    const newPassword=req.body.newPassword;
-    console.log(newPassword);
+    // const newPassword=req.body.newPassword;
+    // console.log(newPassword);
     
-    const saltRound=10;
-    const hashedNewPassword=await bcrypt.hash(newPassword, saltRound)
-    console.log(hashedNewPassword);
-    const newEmail=req.body.newEmail;
-    console.log(newEmail);
+    // const saltRound=10;
+    // const hashedNewPassword=await bcrypt.hash(newPassword, saltRound)
+    // console.log(hashedNewPassword);
+    // const newEmail=req.body.newEmail;
+    // console.log(newEmail);
 
 
 
     
-    const newseller=await SellerModel.findByIdAndUpdate(sellerId,{password:hashedNewPassword,email:newEmail},{new:true})
-    console.log(newseller);
-    if(!newseller){
+    
+    console.log(newSeller);
+    if(!newSeller){
       return res.status(404).json({message:"Seller  not found"})
     }
     else{
-      return res. status(200).json({message:"Seller updated",data:newseller})
+      return res. status(200).json({message:"Seller updated",data:newSeller})
     }
     
     

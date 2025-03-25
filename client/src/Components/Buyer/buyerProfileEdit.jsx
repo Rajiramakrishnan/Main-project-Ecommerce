@@ -10,10 +10,13 @@ import { BiCloudUpload } from "react-icons/bi";
 export const BuyerProfileEdit = ({ changeToView }) => {
   const navigate=useNavigate();
   const [viewbuyer, setviewbuyer] = useState({});
+  const [loading, setLoading] = useState(false);
  
   const {id}=useParams();
   console.log(id);
-   let buyerImg = `${BASE_URL}/${viewbuyer.buyerImg}`
+  let buyerImg = viewbuyer.buyerImg
+  ? `${BASE_URL}/${viewbuyer.buyerImg}`
+  : null;
    console.log(buyerImg);
    
   
@@ -21,6 +24,7 @@ export const BuyerProfileEdit = ({ changeToView }) => {
   const getDataFromServer = async (token, id) => {
    
     try {
+      setLoading(true);
       const res = await axiosInstance.get(`/buyer/findbuyer/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -38,9 +42,15 @@ export const BuyerProfileEdit = ({ changeToView }) => {
       alert(msg);
       console.log("error on finding buyer", error);
     }
+    finally {
+      setLoading(false);
+    }
   };
   const buyerId = localStorage.getItem("ecommerce-buyer-id") || null;
   const tokenId = localStorage.getItem("ecommerce-token") || null; 
+  // console.log("byer id:",buyerId);
+  // console.log("tokenid:",tokenId);
+  
   
   const onSubmit=(e)=>{
     e.preventDefault();
@@ -50,13 +60,17 @@ export const BuyerProfileEdit = ({ changeToView }) => {
       updateProfile(buyerId);
   
     }
+    updateProfile(buyerId);
   }
  
   const validateFields = () => {
-    const { fullName, email,password,confirmPassword,phoneNumber,address,district,state,pincode,dateOfBirth,buyerImg} = viewbuyer;
+    console.log("validation started");
+    
+    const { fullName, email,password,confirmPassword,phoneNumber,address,district,state,pincode,dateOfBirth} = viewbuyer;
 
     if (!fullName || !email||!password||!confirmPassword ||!phoneNumber ||!address ||!district ||!state ||!pincode ||!dateOfBirth ) {
       alert("All fields are required");
+
       return false;
     }
 
@@ -65,13 +79,36 @@ export const BuyerProfileEdit = ({ changeToView }) => {
       alert("Email is invalid");
       return false;
     }
+    console.log("validation ends");
+    
     return true;
   };
   const updateProfile = async (id) => {
+
+    const formData = new FormData();
+
+    // Append all form data to FormData object
+    for (let key in viewbuyer) {
+      if (key !== "buyerImg" && viewbuyer[key]) {
+        formData.append(key, viewbuyer[key]);
+      }
+    }
+
+    if (viewbuyer.buyerImg instanceof File) {
+      formData.append("buyerImg", viewbuyer.buyerImg);
+    }
+
     try {
+      console.log("viewbuyer:",viewbuyer);
+      
       const res = await axiosInstance.patch(
         `/buyer/findandupdate/${id}`,
-        viewbuyer
+        formData,
+        {
+          headers: {
+             "Content-Type": "multipart/form-data",
+           },
+         }
       );
 
       if (res.status === 200) {
@@ -85,9 +122,10 @@ export const BuyerProfileEdit = ({ changeToView }) => {
       } else {
         toast.error("Please try again after sometime");
       }
-      console.log("Error on updating buyer details", error);
+      console.log("Error on updating buyer details", error.message);
     }
      finally {
+      setLoading(false);
       getDataFromServer(tokenId,buyerId);
     }
   };
@@ -100,13 +138,16 @@ export const BuyerProfileEdit = ({ changeToView }) => {
   };
   const handleFileChanges = (e) => {
   
-    
+    const file = e.target.files[0];
     setviewbuyer({
       ...viewbuyer,
-      buyerImg: e.target.files[0],
+      buyerImg: file,
     });
-    console.log("buyerimg:",buyerImg);
-    
+
+    // Show image preview
+    if (file) {
+      buyerImg = URL.createObjectURL(file);
+    }
   }
   useEffect(() => {
     const tokenId = localStorage.getItem("ecommerce-token") || null; //check like this for userid
@@ -324,7 +365,7 @@ export const BuyerProfileEdit = ({ changeToView }) => {
           <button
             onClick={changeToView}
             className="btn  my-3 "
-            // onClick={onSubmit}
+          
           >
             Cancel
           </button>

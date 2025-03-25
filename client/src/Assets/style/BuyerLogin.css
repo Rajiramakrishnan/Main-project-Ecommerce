@@ -77,7 +77,7 @@
         border: 2px solid black;
         border-radius: 10px;
          font-size: 16px;
-         color: white;
+         
          padding: 20px 45px 20px 20px;
     
     }
@@ -126,7 +126,14 @@
         font-size: 16px;
         color:black;
         font-weight: 700;
+        transition: all 0.3s ease;
     
+    }
+    .buyer_login_form form button:active{
+        transform: scale(0.85);
+        background: white;
+        box-shadow: 0 0 10px rgba(0,0,0, .1);
+        transition: all 0.3s ease;
     }
     form .buyer_login_register{
         font-size: 14.5px;
