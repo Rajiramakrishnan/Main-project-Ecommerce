@@ -30,7 +30,7 @@ BuyerRouter.post(
 );
 BuyerRouter.get("/findbuyer/:id", protectRoute, findBuyer);
 BuyerRouter.get("/findallbuyers", protectRoute, findAllBuyers);
-BuyerRouter.patch("/findandupdate/:id", findandupdate);
+BuyerRouter.patch("/findandupdate/:id",uploadBuyerSellerImg.single("buyerImg"),findandupdate);
 BuyerRouter.delete("/findanddelete/:id", findanddelete);
 BuyerRouter.post("/login", login);
 module.exports = { BuyerRouter };

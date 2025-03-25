@@ -76,7 +76,7 @@ const findBuyer=async(req,res)=>{
   const findandupdate=async(req,res)=>{
     try{
       console.log("body", req.body);
-      console.log(req.file);
+     
       
       let imgPath=req.file;
       console.log("imgpath",imgPath);
@@ -84,14 +84,38 @@ const findBuyer=async(req,res)=>{
       console.log(buyerId);
       
       const newPassword=req.body.password;
-      console.log(newPassword);
+      console.log("new password:",newPassword);
       
       const saltRound=10;
       const hashedNewPassword=await bcrypt.hash(newPassword, saltRound)
       console.log(hashedNewPassword);
       const newEmail=req.body.email;
-      console.log(newEmail);
-      const newbuyer=await BuyerModel.findByIdAndUpdate(buyerId,{email:newEmail},{buyerImg:imgPath.path},{new:true})
+  
+      const newFullName=req.body.fullName;
+
+      const newPhoneNumber=req.body.phoneNumber;
+      
+      const newState=req.body.state;
+
+      const newDistrict=req.body.district;
+
+      const newDateOfBirth=req.body.dateOfBirth;
+ 
+      const newAddress=req.body.address;
+ 
+      const newPincode=req.body.pincode;
+      const newconfirmpassword=req.body.confirmPassword;
+      
+
+
+
+
+
+
+
+
+
+      const newbuyer=await BuyerModel.findByIdAndUpdate(buyerId,{email:newEmail},{fullName:newFullName},{phoneNumber:newPhoneNumber},{address:newAddress},{pincode:newPincode},{state:newState},{district:newDistrict},{password:newPassword},{confirmPassword:newconfirmpassword},{dateOfBirth:newDateOfBirth},{buyerImg:imgPath.filename},{new:true})
       console.log(newbuyer);
       if(!newbuyer){
         return res.status(404).json({message:"Buyer  not found"})
@@ -103,7 +127,7 @@ const findBuyer=async(req,res)=>{
       
     }
     catch(error){
-      return res.status(500).json({message:"server error"})
+      return res.status(500).json({message:"server error",error:error.message})
     }
   }
   const findanddelete=async (req,res)=>{
