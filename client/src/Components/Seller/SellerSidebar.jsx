@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import img1 from "../../Assets/Images/profile-pic-female_0627fd.svg";
 import img2 from "../../Assets/Images/download.svg";
 
-function SellerSidebar() {
+function SellerSidebar({data}) {
   return (
     <div className='seller_sidebar_container' >
        <div className="seller_profile_photo_name">
@@ -22,7 +22,7 @@ function SellerSidebar() {
   <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
   <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
 </svg>
-          <Link className="seller_profile_account1" to="#">DASH BOARD</Link>
+          <Link className="seller_profile_account1" to="/seller/dashboard">DASH BOARD</Link>
         </div>
         <div className="seller_profile_myorders">
           <div className="seller_profile_myorders1">
@@ -100,10 +100,10 @@ function SellerSidebar() {
           <div className="seller_profile_account1">PRODUCTS</div>
         </div>
         <div className="seller_profile_account_container">
-          <Link className="seller_profile_acconut_a" to="#">
+          <Link className="seller_profile_acconut_a" to="/product/viewproducts">
            View Products
           </Link>
-          <Link className="seller_profile_acconut_a" to="#">
+          <Link className="seller_profile_acconut_a" to="/product/addProduct">
            Add product
           </Link>
           

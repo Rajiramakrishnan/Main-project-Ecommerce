@@ -38,7 +38,7 @@ position:relative;
 .seller_profile_info{
     width:350px;
     height:630px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     
     display: flex;
     flex-direction: column;
@@ -101,6 +101,7 @@ position:relative;
     margin-left: 15px;
 }
 .seller_profile_account1{
+    /* margin-top: 100px; */
    margin-left: 23px;
     font-size: 16px;
     font-weight: 500;
@@ -167,6 +168,8 @@ position:relative;
   .seller_dashboard{
     width:350px;
     height:150px;
+    margin-top: 100px;
+    /* background-color: aqua; */
     display: flex;
     align-items: center;
     border-bottom:1px solid  rgba(0, 0, 0, .08);

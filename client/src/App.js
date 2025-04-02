@@ -18,6 +18,7 @@ import Homepage from './Components/common/Homepage';
 import Landingcarousal from './Components/Carousal/Landingcarousal';
 import DealCardWrapper from './Components/Cards/Deal-cards/DealCardWrapper';
 import Dealcard from './Components/Cards/Deal-cards/Dealcard';
+import SellerDashboard from './Components/Seller/SellerDashboard';
 
 function App() {
   return (
@@ -48,7 +49,10 @@ function App() {
       <Route path="/seller/sidebar" element={<SellerSidebar/>}/>
       <Route path="/seller/profile" element={<SellerProfile/>}/>
       <Route path="/seller/viewprofile" element={<SellerViewProfile/>}/>
-
+      <Route path="/seller/dashboard"  element={<SellerProfile   data="dashboard"/>}/>
+      {/* product routes */}
+      <Route path="/product/addProduct"  element={<SellerProfile   data="addproduct"/>}/>
+      <Route path="/product/viewproducts"  element={<SellerProfile   data="viewproducts"/>}/>
       {/* Admin Routes */}
       <Route path="/admin/login" element={<AdminLogin/>}/>
       
