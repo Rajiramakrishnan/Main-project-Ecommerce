@@ -80,7 +80,7 @@ function SellerSidebar({data}) {
         </div>
 
         <div className="seller_profile_account_container">
-          <Link className="seller_profile_acconut_a" to="/seller/findseller/${id}">
+          <Link className="seller_profile_acconut_a" to="/seller/viewprofile">
            View Profile
           </Link>
           

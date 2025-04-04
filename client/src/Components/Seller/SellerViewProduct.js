@@ -8,7 +8,9 @@ import { useEffect, useState } from "react";
 
 import emptyIllustration from "../../Assets/Images/empty_illustration.png";
 import { BASE_URL } from "../../Api/api.js";
-function SellerViewProduct() {
+import { useNavigate } from 'react-router-dom';
+function SellerViewProduct({changeActivePage,setCurrentProduct}) {
+    const navigate=useNavigate();
     const [products, setProducts] = useState();
     const [isProductEmpty, setIsProductEmpty] = useState(false);
   
@@ -72,9 +74,9 @@ function SellerViewProduct() {
                 <Button
                   variant="primary"
                   onClick={() => {
-                    // navigate(`/seller/editproductdetails/${item._id}`);
+                    navigate(`/product/editproduct/${item._id}`);
                     // changeActivePage("Edit_Products");
-                    // setCurrentProduct(item._id);
+                    setCurrentProduct(item._id);
                   }}
                 >
                   View Details
