@@ -7,7 +7,7 @@ import InputGroup from "react-bootstrap/InputGroup";
 import { axiosInstance } from "../../Api/axiosInstance";
 import toast from "react-hot-toast";
 import { useNavigate } from 'react-router-dom';
-function SellerAddProduct() {
+function SellerAddProduct({changeActivePage}) {
   const navigate=useNavigate();
   const [validated, setValidated] = useState(false);
   const [productData, setProductData] = useState({
@@ -113,6 +113,7 @@ function SellerAddProduct() {
       if (res.status === 201) {
         toast.success("Product added successfully");
         navigate("/product/viewproducts");
+    
       }
     } catch (error) {
       const statusCode = error?.response?.status;

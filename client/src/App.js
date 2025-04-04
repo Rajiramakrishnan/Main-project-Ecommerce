@@ -48,11 +48,13 @@ function App() {
       <Route path="/seller/signup" element={<SellerRegistration/>}/>
       <Route path="/seller/sidebar" element={<SellerSidebar/>}/>
       <Route path="/seller/profile" element={<SellerProfile/>}/>
-      <Route path="/seller/viewprofile" element={<SellerViewProfile/>}/>
+      <Route path="/seller/viewprofile" element={<SellerProfile data='viewprofile'/>}/>
       <Route path="/seller/dashboard"  element={<SellerProfile   data="dashboard"/>}/>
+      <Route path="/seller/editprofile/:id"  element={<SellerProfile   data="editprofile"/>}/>
       {/* product routes */}
       <Route path="/product/addProduct"  element={<SellerProfile   data="addproduct"/>}/>
       <Route path="/product/viewproducts"  element={<SellerProfile   data="viewproducts"/>}/>
+      <Route path="/product/editproduct/:id"  element={<SellerProfile   data="editproduct"/>}/>
       {/* Admin Routes */}
       <Route path="/admin/login" element={<AdminLogin/>}/>
       

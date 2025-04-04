@@ -1,0 +1,32 @@
+.productDetailEditWrapper{
+    margin-top: 20px;
+    margin:0 auto;
+    width:100%;
+    text-align: left;
+}
+
+.productDetails{
+   padding-block:1em;
+   overflow:hidden;
+}
+.productDetails img{
+    margin-top: 30px;
+    width: 150px;
+    height: 170px;
+}
+
+.editFormWrapper{
+    padding-inline: 1em;
+}
+
+@media (min-width:768px){
+    .productDetailEditWrapper{
+       padding-inline: 15em;
+    }
+}
+
+@media (min-width:1024px){
+    .productDetailEditWrapper{
+        padding-inline: 13em;
+    }
+}
